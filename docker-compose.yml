@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./instance:/app/instance
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app.py
+      - DATABASE_URL=sqlite:///instance/users.db
+      - SECRET_KEY=your-super-secret-key
+    restart: always

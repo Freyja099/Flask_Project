@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+
+# Fichiers de configuration sensible
+instance/
+
+# Fichiers de cache et logs
+*.sqlite
+*.db
