@@ -17,7 +17,7 @@ def register():
         username = request.form['username']
         password = request.form['password']
         
-        # Check if user already exists
+        
         existing_user = User.query.filter_by(username=username).first()
         if existing_user:
             flash('Username already exists!')
